@@ -1,23 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+
+    <!-- CSS Custome -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Container Navbar -->
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+        <div class="navbar">
+            <div class="nav-left">
+                <h2>RUZZBAZAAR</h2>
+                <div class="input-text disable" id="disable">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                    <button><i class="fa-solid fa-sliders"></i></button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a><i class="fa-solid fa-dollar-sign"></i>Money: <span class="green">$4,000.00</span></a>
+                <a><i class="fa-regular fa-heart"></i>Wishlist</a>
+                <a><i class="fa-solid fa-cart-shopping"></i>My Cart</a>
+                <button>
+                    <img src="./assets/image/Saka Bayu Laksono.jpg" alt="">
+                </button>
+            </div>
+            <div class="nav-seek">
+                <button id="toggleBtn"><i class="fa-solid fa-bars"></i></button>
+                <nav id="navbar">
+                    <!-- Isi menu navbar di sini -->
+                    <ul>
+                        <li><a><i class="fa-solid fa-dollar-sign"></i>Money: <span class="green">$4,000.00</span></a>
+                        </li>
+                        <li><a href="#"><i class="fa-regular fa-heart"></i>Wishlist</a></li>
+                        <li><a><i class="fa-solid fa-cart-shopping"></i>My Cart</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
+
+
+
+    <div class="container-main">
+        <!-- Container Aside -->
+        <aside class="disable" id="aside">
+            <div class="radio-group">
+                <div class="radio-card">
+                    <label class="green" for="category">Category</label>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="category" name="category[]" value="Fashion" checked>
+                                Gadget
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="radio-card">
+                    <label class="green" for="price">Price</label>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="price" name="price[]" value="price" checked>
+                                High to low
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" id="price" name="price[]" value="price">
+                                Low to high
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="radio-card">
+                    <label class="green" for="location">Location</label>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="location" name="location[]" value="location" checked>
+                                Nearest
+                            </label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="location" name="location[]" value="location">
+                                Farthest
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="radio-card">
+                    <label class="green" for="rating">Rating</label>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="rating" name="rating[]" value="rating" checked>
+                                Highest
+                            </label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="rating" name="rating[]" value="rating">
+                                Lowest
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="radio-card">
+                    <label class="green" for="shipping">Shipping</label>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="shipping" name="shipping[]" value="shipping" checked>
+                                Regular
+                            </label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="shipping" name="shipping[]" value="shipping">
+                                Next day
+                            </label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="shipping" name="shipping[]" value="shipping">
+                                Same day
+                            </label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="shipping" name="shipping[]" value="shipping">
+                                Instant
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="radio-card">
+                    <label class="green" for="city">City</label>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="city" name="city[]" value="city" checked>
+                                South Jakarta
+                            </label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="city" name="city[]" value="city">
+                                West Jakarta
+                            </label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="city" name="city[]" value="city">
+                                East Jakarta
+                            </label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id="city" name="city[]" value="city">
+                                North Jakarta
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+
+
+        <!-- Container Main -->
+        <main>
+            <!-- Section Contact Catalog -->
+            <section class="contact-catalog">
+                <h4>Homepage</h4>
+                <div class="card-contact-group">
+                    <div class="card-contact">
+                        <div class="store">
+                            <div class="img">
+                                <i class="fa-brands fa-apple"></i>
+                            </div>
+                            <div>
+                                <h3>Apple Official Store</h3>
+                                <p><span class="green">Online</span> South Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button class="btn active">Follow</button>
+                            <button class="btn">Chat</button>
+                            <button class="btn">Shop Info</button>
+                        </div>
+                    </div>
+
+                    <div class="card-contact p">
+                        <p><i class="fa-solid fa-store"></i>Product: <span class="green">560</span></p>
+                        <p><i class="fa-solid fa-user-group"></i>Following: <span class="green">0</span></p>
+                        <p><i class="fa-regular fa-message"></i>Chat Performance: <span class="green">90%</span></p>
+                    </div>
+
+                    <div class="card-contact p">
+                        <p><i class="fa-solid fa-user-plus"></i>Followers: <span class="green">560k</span></p>
+                        <p><i class="fa-regular fa-thumbs-up"></i>Rating: <span class="green">4.9</span></p>
+                        <p><i class="fa-solid fa-user-check"></i>Joined: <span class="green">12/02/2011</span></p>
+                    </div>
+
+                    <div class="card-contact p ">
+                        <p><i class="fa-regular fa-circle-check"></i>Original Product</p>
+                        <p><i class="fa-solid fa-box"></i>Safe Packaging</p>
+                        <p><i class="fa-solid fa-truck-fast"></i>Free Shipping</p>
+                    </div>
+
+                    <div class="card-contact p ">
+                        <p><i class="fa-brands fa-instagram"></i>@appleo_fficial</p>
+                        <p><i class="fa-regular fa-envelope"></i>applesupport@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>(800) 456-2345</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Product Catalog -->
+            <section class="product-catalog">
+                <h2>Catalog</h2>
+                <div class="card-catalog-grup">
+                    <!-- Main 1 -->
+                    <div class="card-catalog">
+                        <div class="card-main">
+                            <div class="card-top">
+                                <div class="cover-image">
+                                    <img src="./assets/image/Product 1.jpg" alt="">
+                                </div>
+                                <h4>iPad Pro 2(2021)</h4>
+                                <p>iPad Pro 2 tetap mempertahan kan desain yang elegan.</p>
+                            </div>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="price">
+                                <h3>$1099</h3>
+                                <h5><s>$1299</s></h5>
+                            </div>
+                            <div class="button">
+                                <button class="btn">Add to Cart</button>
+                                <a class="btn-a">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main 2 -->
+                    <div class="card-catalog">
+                        <div class="card-main">
+                            <div class="card-top">
+                                <div class="cover-image">
+                                    <img src="./assets/image/Product 2.jpg" alt="">
+                                </div>
+                                <h4>iPad Pro 3 (2022)</h4>
+                                <p> iPad Pro 3 dilengkapi dengan layar ProMotion yang cerdas.</p>
+                            </div>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="price">
+                                <h3>$899</h3>
+                                <h5><s>$1099</s></h5>
+                            </div>
+                            <div class="button">
+                                <button class="btn">Add to Cart</button>
+                                <a class="btn-a">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main 3 -->
+                    <div class="card-catalog">
+                        <div class="card-main">
+                            <div class="card-top">
+                                <div class="cover-image">
+                                    <img src="./assets/image/Product 3.jpg" alt="">
+                                </div>
+                                <h4>AirPods (2nd Generation)</h4>
+                                <p>Earbuds yang berukuran kecil dan case pengisian daya yang ramping</p>
+                            </div>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="price">
+                                <h3>$169</h3>
+                                <h5><s>$169</s></h5>
+                            </div>
+                            <div class="button">
+                                <button class="btn">Add to Cart</button>
+                                <a class="btn-a">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main 4 -->
+                    <div class="card-catalog">
+                        <div class="card-main">
+                            <div class="card-top">
+                                <div class="cover-image">
+                                    <img src="./assets/image/Product 4.jpg" alt="">
+                                </div>
+                                <h4>iPhone 15 Pro</h4>
+                                <p>iPhone 15 Pro dengan layar yang lebih canggih, seperti panel ProMotion untuk meningkatkan kualitas tampilan.</p>
+                            </div>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="price">
+                                <h3>$1499</h3>
+                                <h5><s>$1699</s></h5>
+                            </div>
+                            <div class="button">
+                                <button class="btn">Add to Cart</button>
+                                <a class="btn-a">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main 5 -->
+                    <div class="card-catalog">
+                        <div class="card-main">
+                            <div class="card-top">
+                                <div class="cover-image">
+                                    <img src="./assets/image/Product 5.jpg" alt="">
+                                </div>
+                                <h4>MacBook Pro M1 (2022)</h4>
+                                <p>Supperfast M1 chip & beautyful retina display</p>
+                            </div>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="price">
+                                <h3>$1099</h3>
+                                <h5><s>$1230</s></h5>
+                            </div>
+                            <div class="button">
+                                <button class="btn">Add to Cart</button>
+                                <a class="btn-a">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+
+    <!-- Container Footer -->
+    <footer></footer>
+
+
+
+    <!-- Script FontAwesome -->
+    <script src="https://kit.fontawesome.com/ffa3ed8b39.js" crossorigin="anonymous"></script>
+
+    <!-- Script Custome -->
+    <script src="./js/script.js"></script>
+</body>
+
 </html>
